@@ -1,0 +1,13 @@
+import './index.css'
+import './assets/main.css'
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
+
+const app = createApp(App)
+
+app.provide('apiUrl', 'http://localhost:4000/api')
+
+app.use(router)
+
+app.mount('#app')

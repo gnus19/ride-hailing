@@ -1,0 +1,67 @@
+@baseUrl = http://localhost:4000/api
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjVhMWU0NTg5M2UwYTViYjE5ZjE0MDMiLCJlbWFpbCI6InRlYW1AZW1haWwuY29tIiwiaWF0IjoxNzE3NDM1OTk1LCJleHAiOjE3MTc0Mzk1OTV9.s9K3jdtMyKPJjTGvkZ8RplLajJOUpChuYmJvRvwcaiM
+
+###
+
+GET {{baseUrl}}/auth
+
+###
+
+POST {{baseUrl}}/auth/register
+content-type: application/json
+
+{
+    "name": "testUser",
+    "surname": "testSurname",
+    "email": "team@email.com",
+    "password": "pass1234"
+}
+
+###
+
+POST {{baseUrl}}/auth/login
+content-type: application/json
+
+{
+    "email": "team@email.com",
+    "password": "pass1234"
+}
+
+###
+
+POST {{baseUrl}}/rides
+content-type: application/json
+Authorization: {{token}}
+
+{
+    "brand": "Brand 1",
+    "model": "Model 1",
+    "plate": "ABCD1234",
+    "color": "Red",
+    "status": "ACTIVE"
+}
+
+###
+
+GET {{baseUrl}}/rides
+Authorization: {{token}}
+
+###
+
+GET {{baseUrl}}/rides/665a3b2a5ae12ddd8c354ca7
+Authorization: {{token}}
+
+###
+
+PATCH {{baseUrl}}/rides/665a3b2a5ae12ddd8c354ca7
+content-type: application/json
+Authorization: {{token}}
+
+{
+    "brand": "Brand updated"
+}
+
+###
+
+DELETE {{baseUrl}}/rides/665a3b2a5ae12ddd8c354ca7
+Authorization: {{token}}
