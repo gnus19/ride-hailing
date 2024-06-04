@@ -31,13 +31,13 @@ For the server first you need to install Docker and Docker Compose, after that y
 
 1. `cd server`
 2. Crear el archivo `.env` para las variables de ambiente que utilizara Docker Compose, el archivo debe contener
-    ``
+    ```
     PORT=4000
     MONGODB_URL=mongodb://mongodb:27017
     MONGODB_USERNAME=root
     MONGODB_PASSWORD=password
     MONGODB_NAME=ridedb
-    ``
+    ```
 3. `npm i` to install the dependencies
 4.  Run `docker-compose up --build` in order to build the server and DB containers
 5. To verify the server is running properly, open in VSCode `server/request.http` (you need the Rest Client extension to use the file) and press `Send Request` for the first endpoint you see `GET {{baseUrl}}/auth`, if return 200 OK means that the server is running
