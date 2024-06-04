@@ -25,7 +25,7 @@ For run the app you:
 
 #### Server
 
-For the server first you need to install Docker, after that you:
+For the server first you need to install Docker and Docker Compose, after that you:
 
 1. `npm i` to install the dependencies
 2.  Run `docker-compose up --build` in order to build the server and DB containers
