@@ -4,6 +4,7 @@
 
 This project was created with:
 
+- Node 20.14.0
 - Frontend: Vue3, tailwindCSS, Vite
 - Lint: Prettier, ESLint
 - Backend: Nodejs, Express.js
