@@ -20,14 +20,16 @@ To run the project you first clone the repo and then run `cd ride-hailing`,
 
 For run the app you:
 
-1. `npm i` to install the dependencies
-2. `npm run dev` to run the app locally
-3. Navigate to `http://localhost:5173`
+1. `cd app`
+2. `npm i` to install the dependencies
+3. `npm run dev` to run the app locally
+4. Navigate to `http://localhost:5173`
 
 #### Server
 
 For the server first you need to install Docker and Docker Compose, after that you:
 
-1. `npm i` to install the dependencies
-2.  Run `docker-compose up --build` in order to build the server and DB containers
-3. To verify the server is running properly, open in VSCode `server/request.http` (you need the Rest Client extension to use the file) and press `Send Request` for the first endpoint you see `GET {{baseUrl}}/auth`, if return 200 OK means that the server is running
+1. `cd server`
+2. `npm i` to install the dependencies
+3.  Run `docker-compose up --build` in order to build the server and DB containers
+4. To verify the server is running properly, open in VSCode `server/request.http` (you need the Rest Client extension to use the file) and press `Send Request` for the first endpoint you see `GET {{baseUrl}}/auth`, if return 200 OK means that the server is running
